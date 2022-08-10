@@ -109,7 +109,7 @@ process makeTranscript {
     pwd=`basename \${PWD} | cut -c1-${params.number_of_hash_digits}`
     echo \$pwd
     cufflinks --no-update-check -q -p $task.cpus -G $annot $bam_file
-    mv transcripts.gtf transcript_${pair_id}__${params.result_files_label}_\${pwd}.gtf
+    mv transcripts.gtf transcript_${pair_id}_${params.result_files_label}_\${pwd}.gtf
     """
 }
  
